@@ -29,6 +29,12 @@ importers:
       prettier: 2.8.8
       typescript: 5.0.4
 
+  packages/core:
+    specifiers:
+      '@tsuse/shared': workspace:^1.0.0
+    dependencies:
+      '@tsuse/shared': link:../shared
+
 packages:
   /@babel/code-frame/7.21.4:
     resolution: { integrity: sha512-LYvhNKfwWSPpocw8GI7gpK2nq3HSDuEPC/uSYaALSJu9xjsalaaYFOq0Pwt5KmVqwEbZlDu81aLXwBOmD/Fv9g== }
