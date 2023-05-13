@@ -1,4 +1,4 @@
 module.exports = {
   base: '/tsuse/',
-  head: [['link', { rel: 'icon', href: './public/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
 };
