@@ -1,0 +1,2 @@
+!.vitepress/*.ts
+!.vitepress/*.json

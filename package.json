@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest test",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0 --cache",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --fix --cache",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write --cache .",
     "prepare": "husky install",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "docs:dev": "vitepress dev packages",
+    "docs:build": "vitepress build packages"
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,md,json}": [
+    "*.{vue,js,ts,jsx,tsx,json}": [
       "pnpm run lint",
       "pnpm run format"
     ]
@@ -34,6 +36,7 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
+    "vitepress": "1.0.0-alpha.75",
     "vitest": "^0.31.0"
   }
 }

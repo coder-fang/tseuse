@@ -7,8 +7,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@vmejs/shared': resolve(__dirname, 'packages/shared/index.ts'),
-      '@vmejs/core': resolve(__dirname, 'packages/core/index.ts'),
+      '@tsuse/shared': resolve(__dirname, 'packages/shared/index.ts'),
+      '@tsuse/core': resolve(__dirname, 'packages/core/index.ts'),
     },
   },
 });
