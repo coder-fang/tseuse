@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide
+      link: /guide/
     - theme: alt
       text: 工具函数集合
       link: /core/getDevice/
