@@ -3,7 +3,7 @@
 ## 安装
 
 ```bash
-npm i @tsuse/core
+pnpm i @tsuse/core
 ```
 
 ## 简单使用
