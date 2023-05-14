@@ -13,7 +13,8 @@
     "prepare": "husky install",
     "coverage": "vitest run --coverage",
     "docs:dev": "vitepress dev packages",
-    "docs:build": "vitepress build packages"
+    "docs:build": "vitepress build packages",
+    "release": "changeset publish"
   },
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,json}": [
@@ -28,6 +29,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@types/node": "^20.1.3",
