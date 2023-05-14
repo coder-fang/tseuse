@@ -2,11 +2,11 @@
 layout: home
 sidebar: false
 
-title: tsuse
+title: tseuse
 titleTemplate: 一个疯狂的开源前端工具库
 
 hero:
-  name: tsuse
+  name: tseuse
   text: 一个疯狂的开源前端工具库
   tagline: 🎉 一个疯狂的开源前端工具库
   actions:
@@ -24,7 +24,7 @@ hero:
       link: /react
     - theme: alt
       text: View on GitHub
-      link: https://github.com/coder-fang/tsuse
+      link: https://github.com/coder-fang/tseuse
 
 features:
   - title: 功能丰富

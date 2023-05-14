@@ -9,14 +9,14 @@
     "target": "ES6",
     "moduleResolution": "nodenext",
     "paths": {
-      "@tsuse/shared": ["./packages/shared/index.ts"],
-      "@tsuse/shared/*": ["./packages/shared/*"],
-      "@tsuse/core": ["./packages/core/index.ts"],
-      "@tsuse/core/*": ["./packages/core/*"],
-      "@tsuse/vue-hooks": ["./packages/vue-hooks/index.ts"],
-      "@tsuse/vue-hooks/*": ["./packages/vue-hooks/*"],
-      "@tsuse/react-hooks": ["./packages/react-hooks/index.ts"],
-      "@tsuse/react-hooks/*": ["./packages/react-hooks/*"]
+      "@tseuse/shared": ["./packages/shared/index.ts"],
+      "@tseuse/shared/*": ["./packages/shared/*"],
+      "@tseuse/core": ["./packages/core/index.ts"],
+      "@tseuse/core/*": ["./packages/core/*"],
+      "@tseuse/vue-hooks": ["./packages/vue-hooks/index.ts"],
+      "@tseuse/vue-hooks/*": ["./packages/vue-hooks/*"],
+      "@tseuse/react-hooks": ["./packages/react-hooks/index.ts"],
+      "@tseuse/react-hooks/*": ["./packages/react-hooks/*"]
     }
   },
   "include": ["./packages/**/*"],

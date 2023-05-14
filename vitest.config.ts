@@ -7,8 +7,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@tsuse/shared': resolve(__dirname, 'packages/shared/index.ts'),
-      '@tsuse/core': resolve(__dirname, 'packages/core/index.ts'),
+      '@tseuse/shared': resolve(__dirname, 'packages/shared/index.ts'),
+      '@tseuse/core': resolve(__dirname, 'packages/core/index.ts'),
     },
   },
 });

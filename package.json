@@ -1,5 +1,5 @@
 {
-  "name": "tsuse",
+  "name": "tseuse",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,8 @@
     "prepare": "husky install",
     "coverage": "vitest run --coverage",
     "docs:dev": "vitepress dev packages",
-    "docs:build": "vitepress build packages"
+    "docs:build": "vitepress build packages",
+    "release": "changeset publish"
   },
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,json}": [
@@ -21,10 +22,14 @@
       "pnpm run format"
     ]
   },
+  "publicConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@types/node": "^20.1.3",
