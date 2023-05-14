@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "noEmitOnError": true,
+    "outDir": "packages/core/dist",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES6",
+    "moduleResolution": "nodenext",
+    "paths": {
+      "@tsuse/shared": ["./packages/shared/index.ts"],
+      "@tsuse/shared/*": ["./packages/shared/*"],
+      "@tsuse/core": ["./packages/core/index.ts"],
+      "@tsuse/core/*": ["./packages/core/*"],
+      "@tsuse/vue-hooks": ["./packages/vue-hooks/index.ts"],
+      "@tsuse/vue-hooks/*": ["./packages/vue-hooks/*"],
+      "@tsuse/react-hooks": ["./packages/react-hooks/index.ts"],
+      "@tsuse/react-hooks/*": ["./packages/react-hooks/*"]
+    }
+  },
+  "include": ["./packages/**/*"],
+  "exclude": ["node_modules", "**/**/*.md", "**/dist", "dist"]
+}

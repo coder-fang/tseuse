@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
     "test": "vitest test",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --fix --cache",
     "lint:fix": "pnpm run lint --fix",
@@ -35,6 +37,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.75",
     "vitest": "^0.31.0"
