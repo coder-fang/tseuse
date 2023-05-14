@@ -3,13 +3,13 @@
 ## 安装
 
 ```bash
-pnpm i @tsuse/core
+pnpm i @tseuse/core
 ```
 
 ## 简单使用
 
 ```ts
-import { getDevice } from '@tsuse/core';
+import { getDevice } from '@tseuse/core';
 
 const browser = getDevice();
 

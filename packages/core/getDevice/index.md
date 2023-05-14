@@ -9,7 +9,7 @@ category: UA
 ## Usage
 
 ```ts
-import { getDevice } from '@tsuse/core';
+import { getDevice } from '@tseuse/core';
 
 const browser = getDevice();
 
@@ -23,7 +23,7 @@ const browser = getDevice();
 - 浏览器（客户端）中使用 [ua 可选]
 
   ```
-    import { getDevice } from "@tsuse/core"
+    import { getDevice } from "@tseuse/core"
     // 未带参数
     const browser = getDevice()
 
@@ -35,7 +35,7 @@ const browser = getDevice();
 
   ```
     import http from 'http'
-    import { getDevice } from "@tsuse/core"
+    import { getDevice } from "@tseuse/core"
 
     http.createServer(function (req, res) {
         // get user-agent header

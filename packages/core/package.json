@@ -1,5 +1,5 @@
 {
-  "name": "@tsuse/core",
+  "name": "@tseuse/core",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -28,6 +28,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tsuse/shared": "workspace:*"
+    "@tseuse/shared": "workspace:*"
   }
 }

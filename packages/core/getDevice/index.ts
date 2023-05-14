@@ -1,4 +1,4 @@
-import { isString } from '@tsuse/shared';
+import { isString } from '@tseuse/shared';
 
 export const DEVICES = [
   {
