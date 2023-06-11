@@ -1,0 +1,28 @@
+import{_ as s,o as a,c as e,O as n}from"./chunks/framework.49c4ad2c.js";const y=JSON.parse('{"title":"getDevice","description":"","frontmatter":{"category":"UA"},"headers":[],"relativePath":"core/getDevice/index.md","filePath":"core/getDevice/index.md"}'),l={name:"core/getDevice/index.md"},o=n(`<h1 id="getdevice" tabindex="-1">getDevice <a class="header-anchor" href="#getdevice" aria-label="Permalink to &quot;getDevice&quot;">​</a></h1><p>用于从 User-Agent(用户代理数据) 中解析出 <code>设备类型与供应商</code>，在浏览器（客户端）或 node.js（服务器端）中使用。</p><h2 id="usage" tabindex="-1">Usage <a class="header-anchor" href="#usage" aria-label="Permalink to &quot;Usage&quot;">​</a></h2><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">getDevice</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@tseuse/core</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> browser </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">getDevice</span><span style="color:#A6ACCD;">()</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// do something</span></span></code></pre></div><h2 id="文档" tabindex="-1">文档 <a class="header-anchor" href="#文档" aria-label="Permalink to &quot;文档&quot;">​</a></h2><h3 id="参数-ua-可选" tabindex="-1">参数 [ua]：可选] <a class="header-anchor" href="#参数-ua-可选" aria-label="Permalink to &quot;参数 [ua]：可选]&quot;">​</a></h3><ul><li><p>浏览器（客户端）中使用 [ua 可选]</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">import { getDevice } from &quot;@tseuse/core&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  // 未带参数</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const browser = getDevice()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  // 使用参数</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const browser = getDevice(window.navigator.userAgent)</span></span></code></pre></div></li><li><p>node.js（服务器端）中使用 [ua 必传]</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">import http from &#39;http&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  import { getDevice } from &quot;@tseuse/core&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  http.createServer(function (req, res) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      // get user-agent header</span></span>
+<span class="line"><span style="color:#A6ACCD;">      const browser = getDevice(req.headers[&#39;user-agent&#39;]);</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      // write the result as response</span></span>
+<span class="line"><span style="color:#A6ACCD;">      res.end(JSON.stringify(ua, null, &#39;  &#39;));</span></span>
+<span class="line"><span style="color:#A6ACCD;">  })</span></span>
+<span class="line"><span style="color:#A6ACCD;">  .listen(3000, &#39;127.0.0.1&#39;);</span></span></code></pre></div></li></ul><h3 id="返回值-model-vendor" tabindex="-1">返回值：<code>{model: &#39;&#39;, vendor: &#39;&#39;}</code> <a class="header-anchor" href="#返回值-model-vendor" aria-label="Permalink to &quot;返回值：\`{model: &#39;&#39;, vendor: &#39;&#39;}\`&quot;">​</a></h3><ul><li><p>device.model：常见设备类型</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># Chrome/其它</span></span>
+<span class="line"><span style="color:#A6ACCD;">pc</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># ios/android/平板</span></span>
+<span class="line"><span style="color:#A6ACCD;">mobile</span></span></code></pre></div></li><li><p>device.vendor：常见供应商</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># mobile 常见供应商：</span></span>
+<span class="line"><span style="color:#A6ACCD;">Samsung, Apple, Coogle, Huawei, Xiaomi, OPPO, Vivo</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># 其它</span></span>
+<span class="line"><span style="color:#A6ACCD;">other</span></span></code></pre></div></li></ul>`,9),p=[o];function t(c,r,i,d,C,A){return a(),e("div",null,p)}const u=s(l,[["render",t]]);export{y as __pageData,u as default};
