@@ -24,13 +24,14 @@ export const throttle = (fn: Function, wait: number = 300) => {
  */
 export const debounce = (fn: Function, wait: number, immediate: boolean = false) => {
   let timer: any = null;
-  return (this: unknown, ...args: any) => {
+  let ctx = this;
+  return (...args: any) => {
     if (timer) {
       clearTimeout(timer);
       timer = null;
     }
     if (immediate) {
-      if (!timer) fn.apply(this, args); // 第一次调用时执行
+      if (!timer) fn.apply(ctx, args); // 第一次调用时执行
       timer = setTimeout(() => {
         // n秒内多次触发事件，重新计算timer
         timer = null; // n秒内没有触发事件，timer设置为null，保证n秒后能重新触发事件
@@ -43,3 +44,16 @@ export const debounce = (fn: Function, wait: number, immediate: boolean = false)
     }
   };
 };
+
+export const deepClone = (obj: Object,hash: any = new WeakMap) => {
+  if(obj instanceof Date){
+    return new Date(obj);
+  }
+  if(obj instanceof RegExp){
+    return new RegExp(obj);
+  }
+  if(hash.has(obj)){  
+    return hash.get(obj);
+  }
+  
+}
